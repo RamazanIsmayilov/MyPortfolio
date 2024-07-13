@@ -2,3 +2,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.sidebar {
+    border: 0.75px solid rgba(251, 251, 251, 0.05);
+}
+
+.icon {
+    background: rgba(0, 170, 255, 0.1);
+    border: 0.75px solid rgba(251, 251, 251, 0.05);
+}
+
+.me {
+    background: rgba(0, 170, 255, 0.1);
+    border: 0.75px solid rgba(251, 251, 251, 0.05);
+}
+
+.menu-icon{
+    color: #00aaff;
+    opacity: .5;
+}
+
+.left{
+    background: rgba(0, 170, 255, 0.1);
+    border: 0.75px solid rgba(251, 251, 251, 0.05);
+}
+
+.right{
+    background: rgba(0, 170, 255, 0.1);
+    border: 1px solid rgba(251, 251, 251, 0.05);
+}

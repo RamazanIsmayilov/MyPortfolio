@@ -1,0 +1,31 @@
+.sidebar {
+    border: 0.75px solid rgba(251, 251, 251, 0.05);
+}
+
+.sidebar .heading .logo,
+.sidebar .me,
+.sidebar .me .img,
+.sidebar .footer .left,
+.sidebar .footer .right {
+    background: rgba(0, 170, 255, 0.1);
+    border: 0.75px solid rgba(251, 251, 251, 0.05);
+}
+
+.sidebar .menu .menu-icon {
+    opacity: .5;
+}
+
+.sidebar .menu a,
+.sidebar .menu a .menu-icon {
+    transition: .2s;
+}
+
+.sidebar .menu a:hover .menu-icon,
+.sidebar .menu a:focus .menu-icon {
+    opacity: 1;
+}
+
+.active {
+    background: rgba(0, 170, 255, 0.1);
+    border: 0.75px solid rgba(251, 251, 251, 0.05);
+}

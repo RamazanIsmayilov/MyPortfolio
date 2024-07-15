@@ -9,13 +9,17 @@ const Layout: React.FC = () => {
   return (
     <>
       <BrowserRouter>
-        <div className='flex gap-5'>
-          <Sidebar />
-          <Routes>
-            <Route path='/' element={<Home />}></Route>
-            <Route path='/about' element={<About />}></Route>
-            <Route path='/contact' element={<Contact />}></Route>
-          </Routes>
+        <div className='row'>
+          <div className="col-12 col-sm-12 col-md-3 col-lg-3">
+            <Sidebar />
+          </div>
+          <div className="col-12 col-sm-12 col-md-9 col-lg-9">
+            <Routes>
+              <Route path='/' element={<Home />}></Route>
+              <Route path='/about' element={<About />}></Route>
+              <Route path='/contact' element={<Contact />}></Route>
+            </Routes>
+          </div>
         </div>
       </BrowserRouter>
     </>

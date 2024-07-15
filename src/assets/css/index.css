@@ -1,6 +1,0 @@
-@import url('./global.css');
-@import url('./sidebar.css');
-@import url('./home.css');
-@tailwind base;
-@tailwind components;
-@tailwind utilities;

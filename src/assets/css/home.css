@@ -1,12 +1,29 @@
+.home .hero {
+    padding: 25px;
+    background-color: #040E13;
+    border: 0.75px solid rgba(251, 251, 251, 0.05);
+}
+
 .home .hero .hero-content .top {
-    background-color: #0A1C2A;
+    background-color: #0a161f;
+    padding: 12px 14px 12px 13px;
 }
 
 .home .hero .hero-content .top .available,
 .home .hero .hero-content .top .time,
 .home .hero .hero-content .top .contact-me {
-    background: rgba(0, 170, 255, 0.1);
+    font-size: 13px;
+    padding: 13px 21px 13px 20px;
+    background: linear-gradient(-89.99999881140911deg, rgba(0, 170, 255, .04) 0%, rgba(0, 170, 255, .019999999552965164) 100%);
     border: 0.75px solid rgba(251, 251, 251, 0.05);
+}
+
+.home .hero .hero-content .top .time {
+    padding: 12px 107px;
+}
+
+.home .hero .hero-content .top .time .icon {
+    color: #00aaff;
 }
 
 .home .hero .hero-content .top .available .online-dot {
@@ -41,7 +58,18 @@
     }
 }
 
-.home .hero .hero-content .bottom .left,
-.home .hero .hero-content .bottom .right{
-    background-color: #0A1C2A;
+.home .hero .hero-content .bottom .left {
+    background-color: #0a161f;
+    backdrop-filter: blur(30px);
+}
+
+.home .hero .hero-content .bottom .left p {
+    color: #8E8E8E;
+    font-size: 14px;
+}
+
+.home .hero .hero-content .bottom .left p:nth-last-of-type(1) {
+    font-size: 13px;
+    line-height: 26.7px;
+    letter-spacing: 0.23px;
 }

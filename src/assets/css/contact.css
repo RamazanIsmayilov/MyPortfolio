@@ -1,0 +1,41 @@
+.contact {
+    padding: 25px;
+    background-color: #040E13;
+    border: 0.75px solid rgba(251, 251, 251, 0.05);
+}
+
+.contact .heading {
+    background-color: #0a161f;
+    border: 1px solid rgba(251, 251, 251, 0.05);
+    padding: 20px;
+}
+
+.contact .heading p,
+.contact .heading .text-animation {
+    padding: 12px 20px;
+    font-size: 13px;
+    border: 1px solid #fff;
+    display: inline;
+    background: linear-gradient(-89.99999881140911deg, rgba(0, 170, 255, .04) 0%, rgba(0, 170, 255, .019999999552965164) 100%);
+    border: 0.75px solid rgba(251, 251, 251, 0.05);
+    white-space: nowrap;
+}
+
+.contact .heading .text-animation {
+    overflow: hidden;
+}
+
+.contact .heading .text-animation span {
+    display: inline-block;
+    animation: marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}

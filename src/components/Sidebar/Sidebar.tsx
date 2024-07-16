@@ -20,10 +20,10 @@ const Sidebar: React.FC = () => {
   useEffect(() => {
     setInterval(() => {
       const x = new Date();
-      let hour = x.getHours();  
+      let hour = x.getHours();
       const minute = x.getMinutes();
       const seconds = x.getSeconds();
-      
+
       const ampm = hour >= 12 ? 'PM' : 'AM';
       hour = hour % 12;
       hour = hour ? hour : 12; // Saat 0 olduqda 12 göstər
@@ -34,8 +34,6 @@ const Sidebar: React.FC = () => {
 
       setTime(`${formattedHour}:${formattedMinute}:${formattedSeconds} ${ampm}`);
     }, 1000);
-
-    
   }, []);
 
   return (

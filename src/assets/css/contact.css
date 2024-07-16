@@ -7,14 +7,12 @@
 .contact .heading {
     background-color: #0a161f;
     border: 1px solid rgba(251, 251, 251, 0.05);
-    padding: 20px;
 }
 
 .contact .heading p,
 .contact .heading .text-animation {
     padding: 12px 20px;
     font-size: 13px;
-    border: 1px solid #fff;
     display: inline;
     background: linear-gradient(-89.99999881140911deg, rgba(0, 170, 255, .04) 0%, rgba(0, 170, 255, .019999999552965164) 100%);
     border: 0.75px solid rgba(251, 251, 251, 0.05);
@@ -38,4 +36,94 @@
     100% {
         transform: translateX(-100%);
     }
+}
+
+.contact .connection .left,
+.contact .connection .right {
+    padding: 25px;
+    background-color: #0a161f;
+    border: 1px solid rgba(251, 251, 251, 0.05);
+}
+
+.contact .connection .left input,
+.contact .connection .left textarea,
+.contact .connection .left button {
+    font-size: 15px;
+    padding: 13px;
+    color: #ccc;
+    background: linear-gradient(-89.99999881140911deg, rgba(0, 170, 255, .04) 0%, rgba(0, 170, 255, .019999999552965164) 100%);
+    border: 1px solid rgba(251, 251, 251, 0.05);
+    transition: .3s;
+}
+
+.contact .connection .left input::placeholder,
+.contact .connection .left textarea::placeholder {
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.contact .connection .left input:focus,
+.contact .connection .left textarea:focus {
+    border-color: #00aaff !important;
+    outline: none;
+}
+
+.contact .connection .left button:hover {
+    border-color: #00aaff !important;
+    color: #00aaff;
+}
+
+.contact .connection .right .head p {
+    padding: 12px 20px;
+    font-size: 13px;
+    display: inline;
+    background: linear-gradient(-89.99999881140911deg, rgba(0, 170, 255, .04) 0%, rgba(0, 170, 255, .019999999552965164) 100%);
+    border: 0.75px solid rgba(251, 251, 251, 0.05);
+}
+
+.contact .connection .right .contact-infos {
+    background: linear-gradient(-89.99999881140911deg, rgba(0, 170, 255, .04) 0%, rgba(0, 170, 255, .019999999552965164) 100%);
+    padding: 25px;
+}
+
+.contact .connection .right .contact-infos ul li {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+}
+
+.contact .connection .right .contact-infos ul li .icon {
+    font-size: 22px;
+    padding: 14px;
+    color: #00aaff;
+    border: .75px solid rgba(251, 251, 251, 0.1);
+    background: linear-gradient(-90deg, rgba(0, 170, 255, 0.02) 0%, rgba(0, 170, 255, 0) 100%);
+}
+
+.contact .connection .right .contact-infos ul li .content {
+    padding: 16px 36px 10px 26px;
+    border: .75px solid rgba(252, 252, 252, 0.05);
+    position: relative;
+    background: linear-gradient(-89.99999881140911deg, rgba(0, 170, 255, .04) 0%, rgba(0, 170, 255, .019999999552965164) 100%);
+}
+
+.contact .connection .right .contact-infos ul li .content::before {
+    content: "";
+    border-bottom: 1px dashed rgba(0, 170, 255, .2);
+    border-left: 1px dashed rgba(0, 170, 255, .2);
+    top: 52px;
+    height: 24px;
+    left: -45px;
+    width: 44px;
+    position: absolute;
+}
+
+.contact .connection .right .contact-infos ul li .content h3{
+    font-size: 16px;
+    color: #fff;
+}
+
+.contact .connection .right .contact-infos ul li .content p{
+    font-size: 12px;
+    color: #ccc;
 }

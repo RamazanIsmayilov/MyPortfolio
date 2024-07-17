@@ -1,8 +1,40 @@
-import React from 'react'
-import { CiMap } from "react-icons/ci";
-import { CiHeadphones } from "react-icons/ci";
+import React, { useRef, useState } from 'react';
+import { CiMap, CiHeadphones } from "react-icons/ci";
+import emailjs from '@emailjs/browser';
+import toast, { Toaster } from 'react-hot-toast';
+
+const notifyWarning = () => toast.error('Please fill in the inputs');
+const notifySuccess = () => toast.success('Message sent successfully');
 
 const Contact: React.FC = () => {
+  const form = useRef<HTMLFormElement | null>(null);
+
+  const [name, setName] = useState<string>('');
+  const [email, setEmail] = useState<string>('');
+  const [message, setMessage] = useState<string>('');
+
+  const sendEmail = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!name || !email || !message) {
+      notifyWarning()
+    } else {
+      emailjs
+        .sendForm('service_phfs5ps', 'template_gppxegb', form.current as HTMLFormElement, 'GOBM-t-KbgMpS39W3')
+        .then(
+          () => {
+            notifySuccess()
+          },
+          (error) => {
+            console.log('FAILED...', error.text);
+          },
+        );
+    }
+    setName('')
+    setEmail('')
+    setMessage('')
+  };
+
   return (
     <div className='contact'>
       <div className="heading d-flex align-items-center justify-content-between gap-3 p-3">
@@ -15,11 +47,12 @@ const Contact: React.FC = () => {
         <div className="row">
           <div className="col-12 col-sm-12 col-md-7 col-lg-7">
             <div className="left">
-              <form className='d-flex flex-column gap-3'>
-                <input type="text" placeholder='Name' />
-                <input type="email" placeholder='Email' />
-                <textarea name="message" id="message" rows={5} placeholder='Message'></textarea>
-                <button className='fw-medium'>Submit</button>
+              <form ref={form} onSubmit={sendEmail} className='d-flex flex-column gap-3'>
+                <input type="text" name='user_name' placeholder='Name' value={name} onChange={e => setName(e.target.value)} />
+                <input type="email" name='user_email' placeholder='Email' value={email} onChange={e => setEmail(e.target.value)} />
+                <textarea name="message" rows={5} placeholder='Message' value={message} onChange={e => setMessage(e.target.value)}></textarea>
+                <button className='fw-medium' type='submit'>Submit</button>
+                <Toaster />
               </form>
             </div>
           </div>
@@ -58,4 +91,4 @@ const Contact: React.FC = () => {
   )
 }
 
-export default Contact
+export default Contact;

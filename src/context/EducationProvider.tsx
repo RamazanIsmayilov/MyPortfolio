@@ -1,4 +1,3 @@
-// src/context/EducationContext.tsx
 import React, { createContext, ReactNode, useEffect, useState } from 'react';
 
 interface EducationProps {

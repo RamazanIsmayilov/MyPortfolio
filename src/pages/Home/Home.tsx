@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import MainImg from '../../assets/images/main.png'
+import Cv from '../../assets/pdf/cv.pdf';
 import { FaRegClock } from "react-icons/fa";
 import { RiArrowRightUpLine } from "react-icons/ri";
 import { ReactComponent as SignetureIcon } from "../../assets/images/signeture.svg";
@@ -43,6 +44,9 @@ const Home: React.FC = () => {
                 <div className="time d-flex align-items-center text-white gap-2 fw-medium">
                   <FaRegClock className='icon' />
                   <p className='m-0'>{date}</p>
+                </div>
+                <div className="cv">
+                  <a download="Ramazan's Cv.pdf" href={Cv}>My Cv</a>
                 </div>
                 <div className="contact-me">
                   <Link to='/contact' className='text-white d-flex align-items-center gap-1 fw-medium'>

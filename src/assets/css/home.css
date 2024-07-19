@@ -11,6 +11,7 @@
 
 .home .hero .hero-content .top .available,
 .home .hero .hero-content .top .time,
+.home .hero .hero-content .top .cv,
 .home .hero .hero-content .top .contact-me {
     font-size: 13px;
     padding: 13px 21px 13px 20px;
@@ -19,7 +20,7 @@
 }
 
 .home .hero .hero-content .top .time {
-    padding: 12px 107px;
+    padding: 12px 60px;
 }
 
 .home .hero .hero-content .top .time .icon {

@@ -20,12 +20,14 @@
     border: 0.75px solid rgba(251, 251, 251, 0.05);
 }
 
-.about .education .education-lists .content .information h6 {
+.about .education .education-lists .content .information h6,
+.about .experience .experience-lists .content .information h6 {
     color: #F9F9F9;
     font-size: 14px;
 }
 
-.about .education .education-lists .content .information span {
+.about .education .education-lists .content .information span,
+.about .experience .experience-lists .content .information span {
     color: rgb(249 249 249 / 60%);
     font-size: 13px;
 }

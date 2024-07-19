@@ -5,6 +5,7 @@ import '../node_modules/bootstrap/dist/js/bootstrap.bundle'
 import '../node_modules/bootstrap/dist/css/bootstrap.css'
 import App from './App';
 import EducationProvider from './context/EducationProvider';
+import ExperienceProvider from './context/ExperienceProvider';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -12,7 +13,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <EducationProvider>
-      <App />
+      <ExperienceProvider>
+        <App />
+      </ExperienceProvider>
     </EducationProvider>
   </React.StrictMode>
 );

@@ -1,15 +1,18 @@
 // src/components/About.tsx
 import React, { useContext } from 'react';
 import { EducationContext } from '../../context/EducationProvider';
+import { ExperienceContext } from '../../context/ExperienceProvider';
 
 const About: React.FC = () => {
   const educationContext = useContext(EducationContext);
+  const experienceContext = useContext(ExperienceContext);
 
-  if (!educationContext) {
-    return <div>No education data available</div>;
+  if (!educationContext || !experienceContext) {
+    return <div>No data available</div>;
   }
 
   const { educationData } = educationContext;
+  const { experienceData } = experienceContext;
 
   return (
     <div className='about'>
@@ -21,9 +24,9 @@ const About: React.FC = () => {
             </div>
             <div className="education-lists mt-5">
               {educationData.map(item => (
-                <div key={item.id} className="content d-flex align-items-cemter gap-3 mb-4">
+                <div key={item.id} className="content d-flex align-items-center gap-3 mb-4">
                   <div className="img">
-                    <img width={60} src={item.image} alt="image" />
+                    <img width={60} src={item.image} alt={item.title} />
                   </div>
                   <div className="information">
                     <h6 className='m-0 '>{item.title}</h6>
@@ -39,6 +42,20 @@ const About: React.FC = () => {
           <div className="experience">
             <div className="head">
               <p className='text-light fw-medium'>Experience</p>
+            </div>
+            <div className="experience-lists mt-5">
+              {experienceData.map(item => (
+                <div key={item.id} className="content d-flex align-items-center gap-3 mb-4">
+                  <div className="img">
+                    <img width={60} src={item.image} alt={item.title} />
+                  </div>
+                  <div className="information">
+                    <h6 className='m-0 '>{item.title}</h6>
+                    <h6 className='m-0'>{item.position}</h6>
+                    <span>{item.year}</span>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>

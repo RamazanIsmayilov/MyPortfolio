@@ -1,45 +1,45 @@
-// src/context/EducationContext.tsx
+// src/context/ExperienceContext.tsx
 import React, { createContext, ReactNode, useEffect, useState } from 'react';
 
-interface EducationProps {
+interface ExperienceProps {
   id: number;
-  title: string,
+  title: string;
   image: string;
   year: number;
   position: string;
 }
 
-interface EducationProviderProps {
+interface ExperienceProviderProps {
   children: ReactNode;
 }
 
-interface EducationContextProps {
-  educationData: EducationProps[];
+interface ExperienceContextProps {
+  experienceData: ExperienceProps[];
 }
 
-export const EducationContext = createContext<EducationContextProps | undefined>(undefined);
+export const ExperienceContext = createContext<ExperienceContextProps | undefined>(undefined);
 
-const EducationProvider: React.FC<EducationProviderProps> = ({ children }) => {
-  const [educationData, setEducationData] = useState<EducationProps[]>([]);
+const ExperienceProvider: React.FC<ExperienceProviderProps> = ({ children }) => {
+  const [experienceData, setExperienceData] = useState<ExperienceProps[]>([]);
 
   useEffect(() => {
-    const getEducationData = async () => {
+    const getExperienceData = async () => {
       try {
-        const response = await fetch('http://127.0.0.1:5500/src/data/education.json');
+        const response = await fetch('http://127.0.0.1:5500/src/data/experience.json');
         const data = await response.json();
-        setEducationData(data);
+        setExperienceData(data);
       } catch (error) {
         console.error('Error fetching the data: ', error);
       }
     };
-    getEducationData();
+    getExperienceData();
   }, []);
 
   return (
-    <EducationContext.Provider value={{ educationData }}>
+    <ExperienceContext.Provider value={{ experienceData }}>
       {children}
-    </EducationContext.Provider>
+    </ExperienceContext.Provider>
   );
 };
 
-export default EducationProvider;
+export default ExperienceProvider;

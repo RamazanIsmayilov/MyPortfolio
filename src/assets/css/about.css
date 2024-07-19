@@ -1,0 +1,31 @@
+.about {
+    padding: 25px;
+    background-color: #040E13;
+    border: 0.75px solid rgba(251, 251, 251, 0.05);
+}
+
+.about .education,
+.about .experience {
+    padding: 25px;
+    background-color: #0a161f;
+    border: 1px solid rgba(251, 251, 251, 0.05);
+}
+
+.about .education .head p,
+.about .experience .head p {
+    padding: 12px 20px;
+    font-size: 13px;
+    display: inline;
+    background: linear-gradient(-89.99999881140911deg, rgba(0, 170, 255, .04) 0%, rgba(0, 170, 255, .019999999552965164) 100%);
+    border: 0.75px solid rgba(251, 251, 251, 0.05);
+}
+
+.about .education .education-lists .content .information h6 {
+    color: #F9F9F9;
+    font-size: 14px;
+}
+
+.about .education .education-lists .content .information span {
+    color: rgb(249 249 249 / 60%);
+    font-size: 13px;
+}

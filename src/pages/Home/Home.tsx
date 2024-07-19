@@ -8,7 +8,6 @@ import { Link } from 'react-router-dom';
 
 const Home: React.FC = () => {
 
-  const [time, setTime] = useState<string>("");
   const [date, setDate] = useState<string>("");
 
   useEffect(() => {

@@ -1,5 +1,5 @@
 // src/context/ExperienceContext.tsx
-import React, { createContext, ReactNode, useEffect, useState } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
 
 interface ExperienceProps {
   id: number;
@@ -10,14 +10,14 @@ interface ExperienceProps {
 }
 
 interface ExperienceProviderProps {
-  children: ReactNode;
+  children: any;
 }
 
 interface ExperienceContextProps {
   experienceData: ExperienceProps[];
 }
 
-export const ExperienceContext = createContext<ExperienceContextProps | undefined>(undefined);
+export const ExperienceContext = createContext<ExperienceContextProps | undefined>(undefined)
 
 const ExperienceProvider: React.FC<ExperienceProviderProps> = ({ children }) => {
   const [experienceData, setExperienceData] = useState<ExperienceProps[]>([]);

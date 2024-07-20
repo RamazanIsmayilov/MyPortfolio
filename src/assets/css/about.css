@@ -1,18 +1,21 @@
-.about {
+.about-page .area,
+.about-page .skills {
     padding: 25px;
     background-color: #040E13;
     border: 0.75px solid rgba(251, 251, 251, 0.05);
 }
 
-.about .education,
-.about .experience {
+.about-page .area .education,
+.about-page .area .experience,
+.about-page .skills .area {
     padding: 25px;
     background-color: #0a161f;
     border: 1px solid rgba(251, 251, 251, 0.05);
 }
 
-.about .education .head p,
-.about .experience .head p {
+.about-page .area .education .head p,
+.about-page .area .experience .head p,
+.about-page .skills .area .head p {
     padding: 12px 20px;
     font-size: 13px;
     display: inline;
@@ -20,14 +23,21 @@
     border: 0.75px solid rgba(251, 251, 251, 0.05);
 }
 
-.about .education .education-lists .content .information h6,
-.about .experience .experience-lists .content .information h6 {
+.about-page .area .education .education-lists .content .information h6,
+.about-page .area .experience .experience-lists .content .information h6 {
     color: #F9F9F9;
     font-size: 14px;
 }
 
-.about .education .education-lists .content .information span,
-.about .experience .experience-lists .content .information span {
+.about-page .area .education .education-lists .content .information span,
+.about .area .experience .experience-lists .content .information span {
     color: rgb(249 249 249 / 60%);
     font-size: 13px;
+}
+
+.about-page .skills .logos {
+    padding: 0 25px;
+    background-color: #0a161f;
+    border: 1px solid rgba(251, 251, 251, 0.05);
+    overflow-x: hidden;
 }

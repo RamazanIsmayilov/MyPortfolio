@@ -1,15 +1,15 @@
-import React, { createContext, ReactNode, useEffect, useState } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
 
 interface EducationProps {
   id: number;
-  title: string,
+  title: string;
   image: string;
   year: number;
   position: string;
 }
 
 interface EducationProviderProps {
-  children: ReactNode;
+  children: any;
 }
 
 interface EducationContextProps {
